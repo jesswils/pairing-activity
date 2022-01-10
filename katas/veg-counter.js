@@ -13,7 +13,7 @@ function countVeg(str) {
   let counter = 0;
   for (let i = 0; i < vegCounter.length; i++){
     if (vegCounter[i].type === str) {
-      counter++
+      counter += vegCounter[i].quantity
     }
   }
   return counter
