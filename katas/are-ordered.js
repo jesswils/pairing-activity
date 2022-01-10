@@ -4,6 +4,19 @@
   An empty array should return false.
 */
 
-function areOrdered() {}
+function areOrdered(arr) {
+  if(arr.length === 0) {
+    return false;
+  }
+  if(arr.length === 1) {
+    return true;
+  }
+  for(let i = 1; i < arr.length; i++) {
+    if(arr[i] > arr[i-1]) {
+      return false;
+    }
+  }
+  return true;
+}
 
 module.exports = areOrdered;
