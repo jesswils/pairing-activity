@@ -1,5 +1,19 @@
 const sumDigits = require('../katas/sum-digits');
 
+describe("sumDigits", function() {
+  test("return input when provided single digit number", function() {
+    expect(sumDigits(9)).toBe(9);
+  })
+
+  test("return sum of multiple digit number", function() {
+    expect(sumDigits(12)).toBe(3);
+    expect(sumDigits(123)).toBe(6);
+  })
+  test("return sum of digits ignoring non-numerical", function() {
+    expect(sumDigits(10.5)).toBe(6);
+  })
+})
+
 // Tests for sumDigits
 
 /*

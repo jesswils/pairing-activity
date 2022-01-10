@@ -7,6 +7,12 @@
     --> 6
 */
 
-function sumDigits() {}
+function sumDigits(num) {
+  const digits = num.toString().split('');
+  console.log(digits);
+  const digitsNum = digits.map(element => Number(element));
+  const sum = digitsNum.reduce((pv, cv) => pv + cv);
+  return sum;
+}
 
 module.exports = sumDigits;
