@@ -6,6 +6,32 @@
   It should work up to and including the year 10,000 (the '101st' century)
 */
 
-function getCentury() {}
+function getCentury(year) {
+  const getYear = year.toString().split('');
+  getYear.pop()
+  getYear.pop()
+  let number = Number(getYear.join(''))
+  number++
+  let str = number.toString()
+  if (str[1] == '1') {
+    return `${str}st`
+  } else if (str[1] == '2'){
+    return `${str}nd`
+  } else if (str[1] == '3'){
+    return `${str}rd`
+  }
+  return `${str}th`
+}
+
+// take first two digits from year
+// add one to get the century 
+
+// if (number > 10 && number <= 20){
+//   return `${number}th`
+// } else if (number < 10 && number > 0){
+//   return `${number}st`
+// } else if (number > 20 && number < 30) {
+//   return`${number}st`
+// }
 
 module.exports = getCentury;
