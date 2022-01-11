@@ -8,6 +8,33 @@
   range(5, 2, 2) --> [2, 4, 6, 8, 10]
 */
 
-function range() {}
+function range(length, start, step) {
+  let value = [];
+  if (start === undefined && step === undefined){
+    for(let i = 0; i < length; i++) {
+      value.push(i)
+  }
+}
+  if (step === undefined) {
+    for(let i = 0; i < length; i++) {
+      value.push(i + start)
+    }
+  }
+  return value 
+}
 
 module.exports = range;
+
+//   let value = [];
+//   if(arguments['1'] === undefined) {
+//     for(let i = 0; i < arguments['0']; i++) {
+//       value.push(i)
+//  }
+//   }
+//   if (arguments['2'] === undefined) {
+//     for(let i = 0; i < arguments['0']; i++){
+//       console.log(arguments)
+//       value.push(i * arguments['1'])
+//     }
+//   }
+//  return value 
