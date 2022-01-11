@@ -7,7 +7,13 @@
 */
 
 function checkUsernames(usernames) {
-  
+  if (usernames.length === 0) {
+    return usernames;
+  }
+  const validUsernames = usernames.filter((username) => {
+  return /^[a-z0-9_]{5,20}$/.test(username)
+});
+return validUsernames.length === usernames.length;
 }
 
 
