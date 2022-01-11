@@ -12,6 +12,9 @@ function getCentury(year) {
   getYear.pop()
   let number = Number(getYear.join(''))
   number++
+  if (number > 10 && number <= 20){
+      return `${number}th`;
+    }
   let str = number.toString()
   if (str[1] == '1') {
     return `${str}st`

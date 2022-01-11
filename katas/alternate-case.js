@@ -7,7 +7,7 @@
 */
 
 function alternateCase(str) {
-  const letters = str.split('');
+  const letters = str.split('').filter(char => {return char != ' '});
   for(let i = 0; i < letters.length; i++) {
     if(i % 2 === 0) {
       letters[i] = letters[i].toUpperCase();
